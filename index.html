@@ -1,0 +1,3280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mostafa & Soaad | Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+    --ivory:#faf6ef;
+    --cream:#f4eadf;
+    --beige:#e9d9c9;
+
+    --gold:#b99861;
+    --gold-light:#dbc49b;
+
+    --rose:#c69b94;
+    --rose-soft:#ead2cb;
+
+    --sage:#7b8068;
+
+    --brown:#493b34;
+    --brown-light:#77675e;
+
+    --dark:#29211d;
+
+    --serif:"Cormorant Garamond",serif;
+    --sans:"DM Sans",sans-serif;
+
+    --shadow:
+        0 30px 80px rgba(55,40,30,.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--ivory);
+
+    color:var(--brown);
+
+    font-family:var(--sans);
+
+    overflow-x:hidden;
+}
+
+button,
+a{
+    font:inherit;
+}
+
+
+/* =========================================================
+   PAPER GRAIN
+========================================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:9998;
+
+    opacity:.16;
+
+    background-image:
+        radial-gradient(
+            rgba(70,50,40,.16) .6px,
+            transparent .6px
+        );
+
+    background-size:5px 5px;
+
+    mix-blend-mode:multiply;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:3px;
+
+    z-index:10000;
+}
+
+.progress span{
+
+    display:block;
+
+    width:0;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--rose),
+            var(--gold),
+            var(--gold-light)
+        );
+}
+
+
+/* =========================================================
+   OPENING
+========================================================= */
+
+.opening{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:5000;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(198,155,148,.22),
+            transparent 27%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(185,152,97,.20),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #eadbce,
+            #fbf7f0 50%,
+            #e5d4c3
+        );
+
+    transition:
+
+        opacity 1.3s ease,
+        visibility 1.3s ease;
+}
+
+.opening.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+}
+
+
+/* =========================================================
+   OPENING CARD
+========================================================= */
+
+.invitation-card{
+
+    width:min(530px,92vw);
+
+    min-height:680px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.95),
+            rgba(243,231,218,.94)
+        );
+
+    border-radius:24px;
+
+    box-shadow:
+        0 45px 110px rgba(57,40,28,.22);
+
+    border:1px solid rgba(185,152,97,.55);
+}
+
+.invitation-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:17px;
+
+    border:1px solid rgba(185,152,97,.42);
+
+    border-radius:17px;
+
+    pointer-events:none;
+}
+
+.invitation-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:28px;
+
+    border:1px solid rgba(185,152,97,.15);
+
+    border-radius:13px;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   CORNERS
+========================================================= */
+
+.corner{
+
+    position:absolute;
+
+    width:55px;
+    height:55px;
+
+    border-color:var(--gold);
+
+    opacity:.65;
+
+    z-index:3;
+}
+
+.corner.tl{
+
+    top:15px;
+    left:15px;
+
+    border-top:1px solid;
+    border-left:1px solid;
+
+    border-radius:15px 0 0 0;
+}
+
+.corner.tr{
+
+    top:15px;
+    right:15px;
+
+    border-top:1px solid;
+    border-right:1px solid;
+
+    border-radius:0 15px 0 0;
+}
+
+.corner.bl{
+
+    bottom:15px;
+    left:15px;
+
+    border-bottom:1px solid;
+    border-left:1px solid;
+
+    border-radius:0 0 0 15px;
+}
+
+.corner.br{
+
+    bottom:15px;
+    right:15px;
+
+    border-bottom:1px solid;
+    border-right:1px solid;
+
+    border-radius:0 0 0 15px;
+}
+
+
+/* =========================================================
+   OPENING FLOWERS
+========================================================= */
+
+.open-flower{
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    opacity:.45;
+
+    pointer-events:none;
+}
+
+.open-flower.left{
+
+    left:-65px;
+    bottom:-55px;
+}
+
+.open-flower.right{
+
+    right:-65px;
+    top:-55px;
+
+    transform:rotate(180deg);
+}
+
+
+/* =========================================================
+   OPENING CONTENT
+========================================================= */
+
+.invitation-inner{
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+
+    padding:60px 30px;
+}
+
+.invitation-small{
+
+    font-size:9px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:#927c70;
+
+    margin-bottom:38px;
+}
+
+.monogram{
+
+    font-family:var(--serif);
+
+    font-size:105px;
+
+    font-weight:300;
+
+    color:var(--gold);
+
+    line-height:.65;
+
+    letter-spacing:-12px;
+
+    margin-left:-12px;
+}
+
+.invitation-names{
+
+    font-family:var(--serif);
+
+    font-size:60px;
+
+    font-weight:400;
+
+    margin-top:38px;
+}
+
+.invitation-date{
+
+    margin-top:15px;
+
+    font-size:10px;
+
+    letter-spacing:7px;
+
+    color:#8b7469;
+}
+
+.open-btn{
+
+    margin-top:55px;
+
+    padding:17px 42px;
+
+    border:1px solid var(--gold);
+
+    border-radius:40px;
+
+    background:transparent;
+
+    color:var(--brown);
+
+    font-size:9px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.open-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:var(--gold);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.5s;
+
+    z-index:-1;
+}
+
+.open-btn:hover{
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+.open-btn:hover::before{
+
+    transform:scaleX(1);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:100svh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    padding:100px 0 80px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255,255,255,.95),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #faf5ee,
+            #e9dbce
+        );
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    right:-300px;
+    top:-300px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(185,152,97,.20),
+            transparent 70%
+        );
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    left:-300px;
+    bottom:-300px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(198,155,148,.18),
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+
+.hero-background{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            rgba(250,246,239,.73),
+            rgba(250,246,239,.84)
+        ),
+
+        url("images/WhatsApp Image 2026-09-19 at 6.39.19 PM.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    filter:blur(8px);
+
+    transform:scale(1.1);
+
+    opacity:.45;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content{
+
+    width:min(1100px,90%);
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+}
+
+.hero-top{
+
+    text-transform:uppercase;
+
+    letter-spacing:7px;
+
+    font-size:9px;
+
+    color:var(--gold);
+
+    margin-bottom:45px;
+}
+
+
+/* =========================================================
+   HERO ARCH
+========================================================= */
+
+.hero-photo-wrap{
+
+    width:min(430px,76vw);
+
+    height:min(590px,72vh);
+
+    margin:auto;
+
+    position:relative;
+
+    transition:transform .2s ease;
+}
+
+.hero-photo-wrap::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-24px;
+
+    border:1px solid rgba(185,152,97,.65);
+
+    border-radius:
+        220px 220px 35px 35px;
+}
+
+.hero-photo-wrap::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-10px;
+
+    border:1px solid rgba(185,152,97,.35);
+
+    border-radius:
+        210px 210px 25px 25px;
+}
+
+.hero-photo{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    position:relative;
+
+    border-radius:
+        210px 210px 22px 22px;
+
+    background:#eee;
+
+    box-shadow:
+        0 35px 70px
+        rgba(60,42,32,.20);
+}
+
+.hero-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transform:scale(1.03);
+
+    transition:
+        transform 2s cubic-bezier(.2,.7,.2,1);
+}
+
+.hero-photo:hover img{
+
+    transform:scale(1.09);
+}
+
+.hero-photo::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(50,35,27,.18)
+        );
+
+    pointer-events:none;
+}
+
+.hero-dot{
+
+    position:absolute;
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    box-shadow:
+        0 0 0 8px rgba(185,152,97,.12);
+
+    z-index:6;
+}
+
+.hero-dot.one{
+
+    left:-45px;
+    top:35%;
+}
+
+.hero-dot.two{
+
+    right:-45px;
+    bottom:27%;
+}
+
+
+/* =========================================================
+   HERO NAMES
+========================================================= */
+
+.hero-names{
+
+    margin-top:40px;
+
+    font-family:var(--serif);
+
+    font-size:
+        clamp(60px,8vw,105px);
+
+    font-weight:400;
+
+    line-height:.8;
+
+    color:var(--brown);
+}
+
+.hero-amp{
+
+    color:var(--gold);
+
+    font-style:italic;
+}
+
+.hero-bottom{
+
+    margin-top:30px;
+
+    font-family:var(--serif);
+
+    font-size:24px;
+
+    letter-spacing:2px;
+}
+
+.hero-bottom span{
+
+    color:var(--gold);
+
+    margin:0 8px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+
+    min-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(198,155,148,.13),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(185,152,97,.12),
+            transparent 28%
+        ),
+
+        var(--ivory);
+
+    overflow:hidden;
+}
+
+.intro-inner{
+
+    max-width:780px;
+
+    padding:100px 25px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.ornament{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+    color:var(--gold);
+}
+
+.ornament::before,
+.ornament::after{
+
+    content:"";
+
+    width:100px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold)
+        );
+}
+
+.ornament::after{
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold),
+            transparent
+        );
+}
+
+.ornament span{
+
+    font-size:19px;
+}
+
+.eyebrow{
+
+    text-transform:uppercase;
+
+    letter-spacing:6px;
+
+    font-size:9px;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+}
+
+.intro h2{
+
+    font-family:var(--serif);
+
+    font-weight:400;
+
+    font-size:
+        clamp(58px,7vw,100px);
+
+    line-height:.88;
+}
+
+.intro p{
+
+    max-width:570px;
+
+    margin:35px auto 0;
+
+    font-size:14px;
+
+    line-height:2.1;
+
+    color:var(--brown-light);
+}
+
+
+/* =========================================================
+   BOTANICAL
+========================================================= */
+
+.botanical{
+
+    position:absolute;
+
+    width:330px;
+    height:330px;
+
+    opacity:.5;
+
+    pointer-events:none;
+}
+
+.botanical.left{
+
+    left:-100px;
+    bottom:-70px;
+}
+
+.botanical.right{
+
+    right:-100px;
+    top:-70px;
+
+    transform:rotate(180deg);
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story{
+
+    padding:160px 0;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #e9d9cb,
+            #f8f0e7
+        );
+}
+
+.story-inner{
+
+    width:min(1100px,88%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:110px;
+
+    align-items:center;
+}
+
+
+/* =========================================================
+   STORY PHOTO
+========================================================= */
+
+.story-photo-area{
+
+    position:relative;
+
+    width:440px;
+
+    max-width:100%;
+
+    margin:auto;
+}
+
+.story-photo{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:
+        220px 220px 25px 25px;
+
+    background:#eee;
+
+    box-shadow:
+        0 35px 75px
+        rgba(57,40,30,.18);
+}
+
+.story-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform 1.8s ease;
+}
+
+.story-photo:hover img{
+
+    transform:scale(1.08);
+}
+
+.story-photo-area::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-18px;
+
+    border:1px solid var(--gold);
+
+    border-radius:
+        240px 240px 32px 32px;
+
+    transform:rotate(2deg);
+}
+
+.story-photo-area::after{
+
+    content:"01";
+
+    position:absolute;
+
+    right:-55px;
+
+    top:40px;
+
+    width:80px;
+    height:80px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--ivory);
+
+    border:1px solid rgba(185,152,97,.5);
+
+    color:var(--gold);
+
+    font-family:var(--serif);
+
+    font-size:32px;
+}
+
+
+/* =========================================================
+   STORY TEXT
+========================================================= */
+
+.story-content{
+
+    position:relative;
+}
+
+.story-content h2{
+
+    font-family:var(--serif);
+
+    font-size:
+        clamp(60px,7vw,105px);
+
+    font-weight:400;
+
+    line-height:.8;
+
+    margin-bottom:35px;
+}
+
+.story-content p{
+
+    max-width:420px;
+
+    color:var(--brown-light);
+
+    font-size:14px;
+
+    line-height:2.1;
+}
+
+.story-line{
+
+    width:70px;
+
+    height:1px;
+
+    background:var(--gold);
+
+    margin:35px 0;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.date{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    color:white;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            rgba(42,31,26,.73),
+            rgba(42,31,26,.91)
+        ),
+
+        url("images/WhatsApp Image 2026-09-19 at 6.39.19 PM (1).jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+}
+
+.date::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:35px;
+
+    border:1px solid rgba(218,193,150,.45);
+
+    border-radius:28px;
+}
+
+.date::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:50px;
+
+    border:1px solid rgba(218,193,150,.15);
+
+    border-radius:22px;
+}
+
+.date-inner{
+
+    position:relative;
+
+    z-index:3;
+}
+
+.date-kicker{
+
+    text-transform:uppercase;
+
+    letter-spacing:8px;
+
+    font-size:9px;
+
+    color:var(--gold-light);
+}
+
+.date-number{
+
+    font-family:var(--serif);
+
+    font-size:
+        clamp(180px,25vw,340px);
+
+    font-weight:300;
+
+    line-height:.65;
+
+    margin:60px 0 35px;
+
+    color:#f7eee2;
+}
+
+.date-month{
+
+    font-family:var(--serif);
+
+    font-size:52px;
+
+    letter-spacing:10px;
+}
+
+.date-year{
+
+    margin-top:12px;
+
+    letter-spacing:8px;
+
+    color:#d8c8b0;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:55px;
+
+    margin-top:65px;
+}
+
+.count-item{
+
+    min-width:60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+}
+
+.count-item strong{
+
+    font-family:var(--serif);
+
+    font-size:45px;
+
+    font-weight:400;
+}
+
+.count-item span{
+
+    font-size:7px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#cbb99e;
+
+    margin-top:5px;
+}
+
+
+/* =========================================================
+   VENUE
+========================================================= */
+
+.venue{
+
+    padding:160px 0;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(198,155,148,.14),
+            transparent 30%
+        ),
+
+        var(--ivory);
+}
+
+.venue-inner{
+
+    width:min(1100px,88%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:.85fr 1.15fr;
+
+    gap:90px;
+
+    align-items:center;
+}
+
+.venue-content h2{
+
+    font-family:var(--serif);
+
+    font-size:
+        clamp(70px,8vw,115px);
+
+    font-weight:400;
+
+    line-height:.75;
+
+    margin-bottom:45px;
+}
+
+.venue-name{
+
+    font-family:var(--serif);
+
+    font-size:34px;
+
+    margin-bottom:8px;
+}
+
+.venue-city{
+
+    color:#8b756b;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+}
+
+.venue-description{
+
+    max-width:390px;
+
+    color:var(--brown-light);
+
+    font-size:14px;
+
+    line-height:2;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-frame{
+
+    height:570px;
+
+    padding:12px;
+
+    position:relative;
+
+    background:#fffaf4;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+}
+
+.map-frame::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:8px;
+
+    border:1px solid var(--gold);
+
+    border-radius:24px;
+
+    z-index:2;
+
+    pointer-events:none;
+}
+
+.map-frame::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-15px;
+
+    border:1px solid rgba(185,152,97,.35);
+
+    border-radius:38px;
+
+    z-index:-1;
+}
+
+.map-frame iframe{
+
+    width:100%;
+    height:100%;
+
+    border:0;
+
+    border-radius:20px;
+
+    filter:
+        sepia(.08)
+        saturate(.8);
+}
+
+.map-button{
+
+    position:absolute;
+
+    left:50%;
+    bottom:25px;
+
+    transform:translateX(-50%);
+
+    padding:16px 28px;
+
+    background:var(--brown);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    z-index:5;
+
+    transition:.4s;
+}
+
+.map-button:hover{
+
+    background:var(--gold);
+
+    transform:
+        translateX(-50%)
+        translateY(-4px);
+}
+
+
+/* =========================================================
+   RSVP
+========================================================= */
+
+.rsvp{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(185,152,97,.17),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #eadbd0,
+            #faf4eb
+        );
+}
+
+.rsvp-card{
+
+    width:min(720px,88%);
+
+    padding:90px 35px;
+
+    background:
+        rgba(255,252,246,.70);
+
+    border:1px solid rgba(185,152,97,.45);
+
+    border-radius:32px;
+
+    box-shadow:var(--shadow);
+
+    backdrop-filter:blur(10px);
+
+    position:relative;
+}
+
+.rsvp-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:14px;
+
+    border:1px solid rgba(185,152,97,.32);
+
+    border-radius:24px;
+
+    pointer-events:none;
+}
+
+.rsvp-monogram{
+
+    font-family:var(--serif);
+
+    font-size:85px;
+
+    color:var(--gold);
+
+    line-height:.7;
+
+    margin-bottom:35px;
+}
+
+.rsvp h2{
+
+    font-family:var(--serif);
+
+    font-size:
+        clamp(62px,8vw,105px);
+
+    font-weight:400;
+
+    line-height:.8;
+
+    margin-bottom:30px;
+}
+
+.rsvp p{
+
+    color:#7c6a61;
+
+    font-size:13px;
+
+    margin-bottom:42px;
+}
+
+.rsvp-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px 32px;
+
+    background:var(--brown);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:8px;
+
+    transition:.4s;
+}
+
+.rsvp-button:hover{
+
+    background:var(--gold);
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(60,40,30,.22);
+}
+
+.rsvp-button span{
+
+    font-size:17px;
+
+    transition:.4s;
+}
+
+.rsvp-button:hover span{
+
+    transform:translateX(5px);
+}
+
+
+/* =========================================================
+   RSVP FLOWERS
+========================================================= */
+
+.rsvp-flower{
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    opacity:.4;
+
+    pointer-events:none;
+}
+
+.rsvp-flower.left{
+
+    left:-160px;
+    bottom:-130px;
+}
+
+.rsvp-flower.right{
+
+    right:-160px;
+    top:-130px;
+
+    transform:rotate(180deg);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    padding:42px 20px;
+
+    text-align:center;
+
+    background:#2d241f;
+
+    color:#d4c1a8;
+
+    font-family:var(--serif);
+
+    font-size:17px;
+
+    letter-spacing:3px;
+}
+
+
+/* =========================================================
+   PETALS
+========================================================= */
+
+.petal{
+
+    position:fixed;
+
+    top:-30px;
+
+    width:10px;
+    height:7px;
+
+    border-radius:
+        100% 0 100% 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e4c4be,
+            #bd918a
+        );
+
+    opacity:.55;
+
+    pointer-events:none;
+
+    z-index:100;
+
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+    to{
+
+        transform:
+            translate3d(
+                var(--x),
+                110vh,
+                0
+            )
+            rotate(720deg);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+        translateY(60px)
+        scale(.98);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1.2s
+        cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:850px){
+
+    .invitation-card{
+
+        min-height:590px;
+
+        border-radius:20px;
+    }
+
+    .invitation-names{
+
+        font-size:48px;
+    }
+
+    .monogram{
+
+        font-size:85px;
+    }
+
+
+    .hero{
+
+        padding-top:80px;
+    }
+
+    .hero-photo-wrap{
+
+        width:72vw;
+
+        height:500px;
+    }
+
+    .hero-names{
+
+        font-size:65px;
+    }
+
+
+    .story{
+
+        padding:120px 0;
+    }
+
+    .story-inner{
+
+        grid-template-columns:1fr;
+
+        gap:90px;
+    }
+
+    .story-photo-area{
+
+        width:390px;
+    }
+
+    .story-content{
+
+        text-align:center;
+    }
+
+    .story-content p{
+
+        margin:auto;
+    }
+
+    .story-line{
+
+        margin:30px auto;
+    }
+
+
+    .date{
+
+        background-attachment:scroll;
+    }
+
+    .date::before{
+
+        inset:20px;
+
+        border-radius:20px;
+    }
+
+    .date::after{
+
+        inset:32px;
+
+        border-radius:15px;
+    }
+
+    .date-number{
+
+        font-size:180px;
+    }
+
+    .countdown{
+
+        gap:22px;
+    }
+
+    .count-item strong{
+
+        font-size:35px;
+    }
+
+
+    .venue{
+
+        padding:110px 0;
+    }
+
+    .venue-inner{
+
+        grid-template-columns:1fr;
+
+        gap:75px;
+    }
+
+    .venue-content{
+
+        text-align:center;
+    }
+
+    .venue-description{
+
+        margin:auto;
+    }
+
+    .map-frame{
+
+        height:430px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:500px){
+
+    .invitation-card{
+
+        min-height:520px;
+    }
+
+    .invitation-inner{
+
+        padding:45px 20px;
+    }
+
+    .invitation-names{
+
+        font-size:39px;
+    }
+
+    .invitation-date{
+
+        letter-spacing:4px;
+    }
+
+
+    .hero{
+
+        padding:75px 0 65px;
+    }
+
+    .hero-top{
+
+        letter-spacing:5px;
+
+        margin-bottom:30px;
+    }
+
+    .hero-photo-wrap{
+
+        width:78vw;
+
+        height:440px;
+    }
+
+    .hero-photo-wrap::before{
+
+        inset:-16px;
+    }
+
+    .hero-photo-wrap::after{
+
+        inset:-7px;
+    }
+
+    .hero-dot.one{
+
+        left:-25px;
+    }
+
+    .hero-dot.two{
+
+        right:-25px;
+    }
+
+    .hero-names{
+
+        font-size:53px;
+
+        margin-top:32px;
+    }
+
+    .hero-bottom{
+
+        font-size:20px;
+    }
+
+
+    .intro-inner{
+
+        padding:80px 20px;
+    }
+
+    .intro h2{
+
+        font-size:57px;
+    }
+
+
+    .story-photo-area{
+
+        width:82vw;
+    }
+
+    .story-photo-area::after{
+
+        right:-20px;
+
+        width:65px;
+        height:65px;
+
+        font-size:25px;
+    }
+
+    .story-content h2{
+
+        font-size:62px;
+    }
+
+
+    .date-number{
+
+        font-size:145px;
+    }
+
+    .date-month{
+
+        font-size:35px;
+
+        letter-spacing:6px;
+    }
+
+    .countdown{
+
+        gap:12px;
+    }
+
+    .count-item{
+
+        min-width:52px;
+    }
+
+    .count-item strong{
+
+        font-size:27px;
+    }
+
+
+    .venue-content h2{
+
+        font-size:72px;
+    }
+
+    .map-frame{
+
+        height:390px;
+
+        border-radius:22px;
+    }
+
+
+    .rsvp-card{
+
+        padding:75px 20px;
+
+        border-radius:25px;
+    }
+
+    .rsvp-monogram{
+
+        font-size:70px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none!important;
+
+        transition:none!important;
+
+        scroll-behavior:auto!important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PROGRESS
+===================================================== -->
+
+<div class="progress">
+
+    <span id="progress"></span>
+
+</div>
+
+
+<!-- =====================================================
+     OPENING
+===================================================== -->
+
+<div class="opening" id="opening">
+
+    <div class="invitation-card">
+
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+
+
+        <div class="open-flower left">
+
+            <svg viewBox="0 0 250 250">
+
+                <path
+                    d="M10 230 C70 150 130 90 240 20"
+                    fill="none"
+                    stroke="#b99861"
+                    stroke-width="1"
+                />
+
+                <ellipse
+                    cx="65"
+                    cy="170"
+                    rx="14"
+                    ry="40"
+                    fill="#c69b94"
+                    transform="rotate(-45 65 170)"
+                />
+
+                <ellipse
+                    cx="105"
+                    cy="130"
+                    rx="13"
+                    ry="38"
+                    fill="#7b8068"
+                    transform="rotate(40 105 130)"
+                />
+
+                <ellipse
+                    cx="150"
+                    cy="90"
+                    rx="12"
+                    ry="36"
+                    fill="#dbc49b"
+                    transform="rotate(45 150 90)"
+                />
+
+                <circle
+                    cx="48"
+                    cy="190"
+                    r="13"
+                    fill="none"
+                    stroke="#b99861"
+                />
+
+            </svg>
+
+        </div>
+
+
+        <div class="open-flower right">
+
+            <svg viewBox="0 0 250 250">
+
+                <path
+                    d="M10 230 C70 150 130 90 240 20"
+                    fill="none"
+                    stroke="#b99861"
+                    stroke-width="1"
+                />
+
+                <ellipse
+                    cx="65"
+                    cy="170"
+                    rx="14"
+                    ry="40"
+                    fill="#c69b94"
+                    transform="rotate(-45 65 170)"
+                />
+
+                <ellipse
+                    cx="105"
+                    cy="130"
+                    rx="13"
+                    ry="38"
+                    fill="#7b8068"
+                    transform="rotate(40 105 130)"
+                />
+
+            </svg>
+
+        </div>
+
+
+        <div class="invitation-inner">
+
+            <div class="invitation-small">
+
+                Together with their families
+
+            </div>
+
+
+            <div class="monogram">
+
+                M&S
+
+            </div>
+
+
+            <div class="invitation-names">
+
+                Mostafa & Soaad
+
+            </div>
+
+
+            <div class="invitation-date">
+
+                25 · 09 · 2026
+
+            </div>
+
+
+            <button
+                class="open-btn"
+                id="openBtn"
+            >
+
+                Open Invitation
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+    <div class="hero-background"></div>
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-top">
+
+            The beginning of forever
+
+        </div>
+
+
+        <div class="hero-photo-wrap">
+
+
+            <div class="hero-dot one"></div>
+
+            <div class="hero-dot two"></div>
+
+
+            <div class="hero-photo">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-19 at 6.39.19 PM.jpeg"
+                    alt="Mostafa and Soaad"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-names">
+
+            Mostafa
+
+            <span class="hero-amp">
+                &
+            </span>
+
+            Soaad
+
+        </div>
+
+
+        <div class="hero-bottom">
+
+            <span>25</span>
+
+            September
+
+            <span>2026</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+
+    <div class="botanical left">
+
+        <svg viewBox="0 0 330 330">
+
+            <path
+                d="M20 315 C75 215 140 120 310 25"
+                fill="none"
+                stroke="#b99861"
+                stroke-width="1"
+            />
+
+            <ellipse
+                cx="100"
+                cy="240"
+                rx="18"
+                ry="48"
+                fill="#7b8068"
+                transform="rotate(-40 100 240)"
+            />
+
+            <ellipse
+                cx="155"
+                cy="180"
+                rx="17"
+                ry="46"
+                fill="#c69b94"
+                transform="rotate(40 155 180)"
+            />
+
+            <ellipse
+                cx="215"
+                cy="120"
+                rx="16"
+                ry="43"
+                fill="#dbc49b"
+                transform="rotate(43 215 120)"
+            />
+
+        </svg>
+
+    </div>
+
+
+    <div class="botanical right">
+
+        <svg viewBox="0 0 330 330">
+
+            <path
+                d="M20 315 C75 215 140 120 310 25"
+                fill="none"
+                stroke="#b99861"
+                stroke-width="1"
+            />
+
+            <ellipse
+                cx="100"
+                cy="240"
+                rx="18"
+                ry="48"
+                fill="#7b8068"
+                transform="rotate(-40 100 240)"
+            />
+
+            <ellipse
+                cx="155"
+                cy="180"
+                rx="17"
+                ry="46"
+                fill="#c69b94"
+                transform="rotate(40 155 180)"
+            />
+
+        </svg>
+
+    </div>
+
+
+    <div class="intro-inner reveal">
+
+        <div class="ornament">
+
+            <span>✦</span>
+
+        </div>
+
+
+        <div class="eyebrow">
+
+            A little love story
+
+        </div>
+
+
+        <h2>
+
+            Two hearts.<br>
+
+            One beautiful beginning.
+
+        </h2>
+
+
+        <p>
+
+            Some moments become memories.
+            Some memories become stories.
+            And some stories begin with two people
+            choosing each other, forever.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STORY
+===================================================== -->
+
+<section class="story">
+
+
+    <div class="story-inner">
+
+
+        <div class="story-photo-area reveal">
+
+            <div class="story-photo">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-19 at 6.39.19 PM (1).jpeg"
+                    alt="Mostafa and Soaad"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="story-content reveal">
+
+
+            <div class="eyebrow">
+
+                Our Story
+
+            </div>
+
+
+            <h2>
+
+                The beginning<br>
+
+                of forever.
+
+            </h2>
+
+
+            <div class="story-line"></div>
+
+
+            <p>
+
+                A beautiful chapter is about to begin.
+                A day filled with love, family,
+                laughter and memories that will stay
+                with us forever.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DATE
+===================================================== -->
+
+<section class="date">
+
+
+    <div class="date-inner reveal">
+
+
+        <div class="date-kicker">
+
+            Save the date
+
+        </div>
+
+
+        <div class="date-number">
+
+            25
+
+        </div>
+
+
+        <div class="date-month">
+
+            SEPTEMBER
+
+        </div>
+
+
+        <div class="date-year">
+
+            2026
+
+        </div>
+
+
+        <div class="countdown">
+
+
+            <div class="count-item">
+
+                <strong id="days">
+                    00
+                </strong>
+
+                <span>
+                    Days
+                </span>
+
+            </div>
+
+
+            <div class="count-item">
+
+                <strong id="hours">
+                    00
+                </strong>
+
+                <span>
+                    Hours
+                </span>
+
+            </div>
+
+
+            <div class="count-item">
+
+                <strong id="minutes">
+                    00
+                </strong>
+
+                <span>
+                    Minutes
+                </span>
+
+            </div>
+
+
+            <div class="count-item">
+
+                <strong id="seconds">
+                    00
+                </strong>
+
+                <span>
+                    Seconds
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VENUE
+===================================================== -->
+
+<section class="venue">
+
+
+    <div class="venue-inner">
+
+
+        <div class="venue-content reveal">
+
+
+            <div class="eyebrow">
+
+                The Celebration
+
+            </div>
+
+
+            <h2>
+
+                Meet<br>
+
+                Us There.
+
+            </h2>
+
+
+            <div class="venue-name">
+
+                Grand Star
+
+            </div>
+
+
+            <div class="venue-city">
+
+                ASSIUT · EGYPT
+
+            </div>
+
+
+            <p class="venue-description">
+
+                We would be honored to celebrate
+                this special evening surrounded
+                by the people we love.
+
+            </p>
+
+        </div>
+
+
+        <div class="map-frame reveal">
+
+
+            <iframe
+                src="https://www.google.com/maps?q=27.1850131,31.0484496&z=17&output=embed"
+                loading="lazy">
+            </iframe>
+
+
+            <a
+                href="https://maps.app.goo.gl/EM7ncqowTdUgtJf6A"
+                target="_blank"
+                class="map-button"
+            >
+
+                Open in Google Maps
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RSVP
+===================================================== -->
+
+<section class="rsvp">
+
+
+    <div class="rsvp-flower left">
+
+        <svg viewBox="0 0 420 420">
+
+            <path
+                d="M20 400 C100 280 190 150 400 20"
+                fill="none"
+                stroke="#b99861"
+                stroke-width="1"
+            />
+
+            <ellipse
+                cx="130"
+                cy="315"
+                rx="20"
+                ry="58"
+                fill="#7b8068"
+                transform="rotate(-45 130 315)"
+            />
+
+            <ellipse
+                cx="200"
+                cy="240"
+                rx="20"
+                ry="58"
+                fill="#c69b94"
+                transform="rotate(40 200 240)"
+            />
+
+            <ellipse
+                cx="275"
+                cy="165"
+                rx="19"
+                ry="55"
+                fill="#dbc49b"
+                transform="rotate(45 275 165)"
+            />
+
+        </svg>
+
+    </div>
+
+
+    <div class="rsvp-flower right">
+
+        <svg viewBox="0 0 420 420">
+
+            <path
+                d="M20 400 C100 280 190 150 400 20"
+                fill="none"
+                stroke="#b99861"
+                stroke-width="1"
+            />
+
+            <ellipse
+                cx="130"
+                cy="315"
+                rx="20"
+                ry="58"
+                fill="#7b8068"
+                transform="rotate(-45 130 315)"
+            />
+
+            <ellipse
+                cx="200"
+                cy="240"
+                rx="20"
+                ry="58"
+                fill="#c69b94"
+                transform="rotate(40 200 240)"
+            />
+
+        </svg>
+
+    </div>
+
+
+    <div class="rsvp-card reveal">
+
+
+        <div class="rsvp-monogram">
+
+            M&S
+
+        </div>
+
+
+        <div class="eyebrow">
+
+            With love
+
+        </div>
+
+
+        <h2>
+
+            Will you<br>
+
+            celebrate with us?
+
+        </h2>
+
+
+        <p>
+
+            Your presence would make our day complete.
+
+        </p>
+
+
+        <a
+            href="https://wa.me/201022290052"
+            target="_blank"
+            class="rsvp-button"
+            id="rsvpButton"
+        >
+
+            Confirm Attendance
+
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    Mostafa & Soaad · 25 · 09 · 2026
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   OPEN INVITATION
+========================================================= */
+
+const opening =
+document.getElementById("opening");
+
+const openBtn =
+document.getElementById("openBtn");
+
+openBtn.onclick = ()=>{
+
+    opening.classList.add("hide");
+
+    document.body.style.overflow="auto";
+
+    petals();
+
+};
+
+document.body.style.overflow="hidden";
+
+
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+window.addEventListener("scroll",()=>{
+
+    const scroll =
+        window.scrollY;
+
+    const total =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const percent =
+        (scroll / total) * 100;
+
+    document.getElementById("progress")
+        .style.width =
+        percent+"%";
+
+});
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+const observer =
+new IntersectionObserver(
+
+    entries=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                entry.target
+                    .classList
+                    .add("show");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+document
+.querySelectorAll(".reveal")
+.forEach(el=>observer.observe(el));
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+const wedding =
+new Date(
+    "September 25, 2026 00:00:00"
+).getTime();
+
+
+function countdown(){
+
+    const now =
+        Date.now();
+
+    const distance =
+        wedding-now;
+
+
+    if(distance<=0){
+
+        [
+            "days",
+            "hours",
+            "minutes",
+            "seconds"
+        ].forEach(id=>{
+
+            document.getElementById(id)
+                .innerText="00";
+
+        });
+
+        return;
+    }
+
+
+    const days =
+        Math.floor(
+            distance /
+            (1000*60*60*24)
+        );
+
+
+    const hours =
+        Math.floor(
+            distance /
+            (1000*60*60)
+        ) % 24;
+
+
+    const minutes =
+        Math.floor(
+            distance /
+            (1000*60)
+        ) % 60;
+
+
+    const seconds =
+        Math.floor(
+            distance/1000
+        ) % 60;
+
+
+    document.getElementById("days")
+        .innerText =
+        String(days).padStart(2,"0");
+
+
+    document.getElementById("hours")
+        .innerText =
+        String(hours).padStart(2,"0");
+
+
+    document.getElementById("minutes")
+        .innerText =
+        String(minutes).padStart(2,"0");
+
+
+    document.getElementById("seconds")
+        .innerText =
+        String(seconds).padStart(2,"0");
+
+}
+
+setInterval(countdown,1000);
+
+countdown();
+
+
+/* =========================================================
+   HERO PARALLAX
+========================================================= */
+
+const heroPhoto =
+document.querySelector(".hero-photo-wrap");
+
+window.addEventListener("mousemove",e=>{
+
+    if(window.innerWidth<850)
+        return;
+
+    const x =
+        e.clientX /
+        window.innerWidth -
+        .5;
+
+    const y =
+        e.clientY /
+        window.innerHeight -
+        .5;
+
+    heroPhoto.style.transform =
+        `
+        translate(
+            ${x*8}px,
+            ${y*8}px
+        )
+        `;
+
+});
+
+
+/* =========================================================
+   PETALS
+========================================================= */
+
+function petals(){
+
+    for(let i=0;i<35;i++){
+
+        setTimeout(()=>{
+
+            const petal =
+                document.createElement("div");
+
+            petal.className="petal";
+
+            petal.style.left =
+                Math.random()*100+"vw";
+
+            petal.style.setProperty(
+                "--x",
+                (Math.random()*220-110)+"px"
+            );
+
+            petal.style.animationDuration =
+                5+
+                Math.random()*6+
+                "s";
+
+            document.body.appendChild(petal);
+
+            setTimeout(()=>{
+
+                petal.remove();
+
+            },12000);
+
+        },i*150);
+
+    }
+
+}
+
+
+/* =========================================================
+   RSVP MAGNETIC
+========================================================= */
+
+const rsvp =
+document.getElementById("rsvpButton");
+
+if(window.innerWidth>850){
+
+    rsvp.addEventListener(
+        "mousemove",
+        e=>{
+
+            const rect =
+                rsvp.getBoundingClientRect();
+
+            const x =
+                e.clientX -
+                rect.left -
+                rect.width/2;
+
+            const y =
+                e.clientY -
+                rect.top -
+                rect.height/2;
+
+            rsvp.style.transform =
+                `
+                translate(
+                    ${x*.12}px,
+                    ${y*.12}px
+                )
+                `;
+
+        }
+    );
+
+
+    rsvp.addEventListener(
+        "mouseleave",
+        ()=>{
+
+            rsvp.style.transform=
+                "translate(0,0)";
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   FINAL CELEBRATION
+========================================================= */
+
+let celebrated=false;
+
+const finalObserver =
+new IntersectionObserver(
+
+    entries=>{
+
+        if(
+            entries[0].isIntersecting &&
+            !celebrated
+        ){
+
+            celebrated=true;
+
+            celebration();
+
+        }
+
+    },
+
+    {
+        threshold:.5
+    }
+
+);
+
+finalObserver.observe(
+    document.querySelector(".rsvp")
+);
+
+
+function celebration(){
+
+    for(let i=0;i<55;i++){
+
+        const piece =
+            document.createElement("div");
+
+        piece.style.position="fixed";
+
+        piece.style.left="50%";
+        piece.style.top="65%";
+
+        piece.style.width="7px";
+        piece.style.height="13px";
+
+        piece.style.zIndex="999";
+
+        piece.style.pointerEvents="none";
+
+        piece.style.background=[
+
+            "#b99861",
+            "#c69b94",
+            "#7b8068",
+            "#dbc49b"
+
+        ][
+            Math.floor(
+                Math.random()*4
+            )
+        ];
+
+
+        document.body.appendChild(piece);
+
+
+        const angle =
+            Math.random() *
+            Math.PI*2;
+
+        const distance =
+            180+
+            Math.random()*350;
+
+
+        const x =
+            Math.cos(angle) *
+            distance;
+
+        const y =
+            Math.sin(angle) *
+            distance;
+
+
+        piece.animate(
+
+            [
+
+                {
+                    transform:
+                        "translate(-50%,-50%) rotate(0)",
+                    opacity:1
+                },
+
+                {
+                    transform:
+                        `
+                        translate(
+                            ${x}px,
+                            ${y}px
+                        )
+                        rotate(720deg)
+                        `,
+                    opacity:0
+                }
+
+            ],
+
+            {
+
+                duration:
+                    1400+
+                    Math.random()*1200,
+
+                easing:
+                    "cubic-bezier(.2,.7,.2,1)"
+
+            }
+
+        ).onfinish=()=>{
+
+            piece.remove();
+
+        };
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
