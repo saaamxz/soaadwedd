@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -17,7 +19,12 @@
 
 <style>
 
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
+
     --ivory:#faf7f1;
     --cream:#f3e8dc;
     --beige:#e7d7c8;
@@ -43,6 +50,11 @@
         0 30px 80px rgba(55,40,30,.14);
 }
 
+
+/* =========================================================
+   RESET
+========================================================= */
+
 *{
     margin:0;
     padding:0;
@@ -54,23 +66,40 @@ html{
 }
 
 body{
+
     background:var(--ivory);
+
     color:var(--brown);
+
     font-family:var(--sans);
+
     overflow-x:hidden;
 }
 
 button,
-a{
+a,
+input,
+textarea{
     font:inherit;
 }
 
+
+/* =========================================================
+   GRAIN
+========================================================= */
+
 body::before{
+
     content:"";
+
     position:fixed;
+
     inset:0;
+
     pointer-events:none;
+
     z-index:9998;
+
     opacity:.11;
 
     background-image:
@@ -80,6 +109,7 @@ body::before{
         );
 
     background-size:5px 5px;
+
     mix-blend-mode:multiply;
 }
 
@@ -89,16 +119,22 @@ body::before{
 ========================================================= */
 
 .progress{
+
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
     height:3px;
+
     z-index:10000;
 }
 
 .progress span{
+
     display:block;
+
     width:0;
     height:100%;
 
@@ -117,11 +153,15 @@ body::before{
 ========================================================= */
 
 .opening{
+
     position:fixed;
+
     inset:0;
+
     z-index:5000;
 
     display:flex;
+
     justify-content:center;
     align-items:center;
 
@@ -153,7 +193,9 @@ body::before{
 }
 
 .opening.hide{
+
     opacity:0;
+
     visibility:hidden;
 }
 
@@ -163,13 +205,17 @@ body::before{
 ========================================================= */
 
 .invitation-card{
+
     width:min(500px,92vw);
+
     min-height:650px;
 
     position:relative;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     overflow:hidden;
@@ -181,7 +227,7 @@ body::before{
             rgba(243,232,220,.95)
         );
 
-    border-radius:28px;
+    border-radius:34px;
 
     border:1px solid rgba(185,152,97,.50);
 
@@ -190,21 +236,29 @@ body::before{
 }
 
 .invitation-card::before{
+
     content:"";
+
     position:absolute;
+
     inset:18px;
 
     border:1px solid rgba(185,152,97,.38);
-    border-radius:20px;
+
+    border-radius:25px;
 }
 
 .invitation-card::after{
+
     content:"";
+
     position:absolute;
+
     inset:31px;
 
     border:1px solid rgba(185,152,97,.13);
-    border-radius:15px;
+
+    border-radius:19px;
 }
 
 
@@ -213,55 +267,61 @@ body::before{
 ========================================================= */
 
 .corner{
+
     position:absolute;
 
     width:50px;
     height:50px;
 
     border-color:var(--gold);
+
     opacity:.65;
 
     z-index:4;
 }
 
 .corner.tl{
+
     top:19px;
     left:19px;
 
     border-top:1px solid;
     border-left:1px solid;
 
-    border-radius:13px 0 0 0;
+    border-radius:16px 0 0 0;
 }
 
 .corner.tr{
+
     top:19px;
     right:19px;
 
     border-top:1px solid;
     border-right:1px solid;
 
-    border-radius:0 13px 0 0;
+    border-radius:0 16px 0 0;
 }
 
 .corner.bl{
+
     bottom:19px;
     left:19px;
 
     border-bottom:1px solid;
     border-left:1px solid;
 
-    border-radius:0 0 0 13px;
+    border-radius:0 0 0 16px;
 }
 
 .corner.br{
+
     bottom:19px;
     right:19px;
 
     border-bottom:1px solid;
     border-right:1px solid;
 
-    border-radius:0 0 13px 0;
+    border-radius:0 0 16px 0;
 }
 
 
@@ -270,6 +330,7 @@ body::before{
 ========================================================= */
 
 .open-flower{
+
     position:absolute;
 
     width:230px;
@@ -278,15 +339,18 @@ body::before{
     opacity:.32;
 
     pointer-events:none;
+
     z-index:1;
 }
 
 .open-flower.left{
+
     left:-75px;
     bottom:-55px;
 }
 
 .open-flower.right{
+
     right:-75px;
     top:-55px;
 
@@ -299,16 +363,22 @@ body::before{
 ========================================================= */
 
 .invitation-inner{
+
     position:relative;
+
     z-index:5;
 
     text-align:center;
+
     padding:55px 25px;
 }
 
 .invitation-small{
+
     font-size:9px;
+
     letter-spacing:5px;
+
     text-transform:uppercase;
 
     color:#927c70;
@@ -317,32 +387,39 @@ body::before{
 }
 
 .monogram{
+
     font-family:var(--serif);
 
     font-size:92px;
+
     font-weight:300;
 
     color:var(--gold);
 
     line-height:.7;
+
     letter-spacing:-10px;
 
     margin-left:-10px;
 }
 
 .invitation-names{
+
     font-family:var(--serif);
 
     font-size:57px;
+
     font-weight:400;
 
     margin-top:35px;
 }
 
 .invitation-date{
+
     margin-top:15px;
 
     font-size:10px;
+
     letter-spacing:6px;
 
     color:#8b7469;
@@ -354,11 +431,13 @@ body::before{
 ========================================================= */
 
 .open-btn{
+
     margin-top:52px;
 
     padding:16px 39px;
 
     border:1px solid var(--gold);
+
     border-radius:50px;
 
     background:transparent;
@@ -366,6 +445,7 @@ body::before{
     color:var(--brown);
 
     font-size:9px;
+
     letter-spacing:4px;
 
     text-transform:uppercase;
@@ -373,20 +453,24 @@ body::before{
     cursor:pointer;
 
     position:relative;
+
     overflow:hidden;
 
     transition:.45s;
 }
 
 .open-btn::before{
+
     content:"";
 
     position:absolute;
+
     inset:0;
 
     background:var(--gold);
 
     transform:scaleX(0);
+
     transform-origin:left;
 
     transition:.45s;
@@ -395,11 +479,14 @@ body::before{
 }
 
 .open-btn:hover{
+
     color:white;
+
     transform:translateY(-3px);
 }
 
 .open-btn:hover::before{
+
     transform:scaleX(1);
 }
 
@@ -409,12 +496,15 @@ body::before{
 ========================================================= */
 
 .hero{
+
     min-height:100svh;
 
     position:relative;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     overflow:hidden;
@@ -436,6 +526,7 @@ body::before{
 }
 
 .hero::before{
+
     content:"";
 
     position:absolute;
@@ -457,6 +548,7 @@ body::before{
 }
 
 .hero::after{
+
     content:"";
 
     position:absolute;
@@ -479,11 +571,13 @@ body::before{
 
 
 /* =========================================================
-   HERO BACKGROUND IMAGE
+   HERO BACKGROUND
 ========================================================= */
 
 .hero-background{
+
     position:absolute;
+
     inset:0;
 
     background:
@@ -492,9 +586,10 @@ body::before{
             rgba(250,246,239,.87)
         ),
 
-        url("./images/couple1.jpeg");
+        url("./images/couple3.jpeg");
 
     background-size:cover;
+
     background-position:center;
 
     filter:blur(10px);
@@ -510,15 +605,18 @@ body::before{
 ========================================================= */
 
 .hero-content{
+
     width:min(1050px,90%);
 
     position:relative;
+
     z-index:5;
 
     text-align:center;
 }
 
 .hero-top{
+
     text-transform:uppercase;
 
     letter-spacing:7px;
@@ -536,7 +634,9 @@ body::before{
 ========================================================= */
 
 .hero-photo-wrap{
+
     width:min(400px,76vw);
+
     height:min(560px,68vh);
 
     margin:auto;
@@ -548,6 +648,7 @@ body::before{
 }
 
 .hero-photo-wrap::before{
+
     content:"";
 
     position:absolute;
@@ -557,10 +658,11 @@ body::before{
     border:1px solid rgba(185,152,97,.55);
 
     border-radius:
-        205px 205px 26px 26px;
+        205px 205px 32px 32px;
 }
 
 .hero-photo-wrap::after{
+
     content:"";
 
     position:absolute;
@@ -570,10 +672,11 @@ body::before{
     border:1px solid rgba(185,152,97,.22);
 
     border-radius:
-        200px 200px 20px 20px;
+        200px 200px 25px 25px;
 }
 
 .hero-photo{
+
     width:100%;
     height:100%;
 
@@ -582,7 +685,7 @@ body::before{
     position:relative;
 
     border-radius:
-        195px 195px 18px 18px;
+        195px 195px 25px 25px;
 
     background:#eee;
 
@@ -591,6 +694,7 @@ body::before{
 }
 
 .hero-photo img{
+
     width:100%;
     height:100%;
 
@@ -606,13 +710,16 @@ body::before{
 }
 
 .hero-photo:hover img{
+
     transform:scale(1.07);
 }
 
 .hero-photo::after{
+
     content:"";
 
     position:absolute;
+
     inset:0;
 
     background:
@@ -624,6 +731,7 @@ body::before{
 }
 
 .hero-dot{
+
     position:absolute;
 
     width:10px;
@@ -640,12 +748,16 @@ body::before{
 }
 
 .hero-dot.one{
+
     left:-34px;
+
     top:34%;
 }
 
 .hero-dot.two{
+
     right:-34px;
+
     bottom:25%;
 }
 
@@ -655,6 +767,7 @@ body::before{
 ========================================================= */
 
 .hero-names{
+
     margin-top:39px;
 
     font-family:var(--serif);
@@ -670,11 +783,14 @@ body::before{
 }
 
 .hero-amp{
+
     color:var(--gold);
+
     font-style:italic;
 }
 
 .hero-bottom{
+
     margin-top:28px;
 
     font-family:var(--serif);
@@ -685,7 +801,9 @@ body::before{
 }
 
 .hero-bottom span{
+
     color:var(--gold);
+
     margin:0 8px;
 }
 
@@ -695,11 +813,13 @@ body::before{
 ========================================================= */
 
 .intro{
+
     min-height:82vh;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
@@ -725,18 +845,22 @@ body::before{
 }
 
 .intro-inner{
+
     max-width:780px;
 
     padding:100px 25px;
 
     position:relative;
+
     z-index:2;
 }
 
 .ornament{
+
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     gap:18px;
@@ -748,6 +872,7 @@ body::before{
 
 .ornament::before,
 .ornament::after{
+
     content:"";
 
     width:90px;
@@ -762,6 +887,7 @@ body::before{
 }
 
 .ornament::after{
+
     background:
         linear-gradient(
             90deg,
@@ -771,10 +897,12 @@ body::before{
 }
 
 .ornament span{
+
     font-size:18px;
 }
 
 .eyebrow{
+
     text-transform:uppercase;
 
     letter-spacing:5px;
@@ -787,6 +915,7 @@ body::before{
 }
 
 .intro h2{
+
     font-family:var(--serif);
 
     font-weight:400;
@@ -798,6 +927,7 @@ body::before{
 }
 
 .intro p{
+
     max-width:570px;
 
     margin:34px auto 0;
@@ -815,6 +945,7 @@ body::before{
 ========================================================= */
 
 .botanical{
+
     position:absolute;
 
     width:300px;
@@ -826,12 +957,16 @@ body::before{
 }
 
 .botanical.left{
+
     left:-100px;
+
     bottom:-80px;
 }
 
 .botanical.right{
+
     right:-100px;
+
     top:-80px;
 
     transform:rotate(180deg);
@@ -843,6 +978,7 @@ body::before{
 ========================================================= */
 
 .story{
+
     padding:150px 0;
 
     position:relative;
@@ -858,6 +994,7 @@ body::before{
 }
 
 .story-inner{
+
     width:min(1080px,88%);
 
     margin:auto;
@@ -872,9 +1009,11 @@ body::before{
 }
 
 .story-photo-area{
+
     position:relative;
 
     width:420px;
+
     max-width:100%;
 
     margin:auto;
@@ -886,6 +1025,8 @@ body::before{
 
     border:1px solid rgba(185,152,97,.40);
 
+    border-radius:32px;
+
     box-shadow:
         0 30px 65px rgba(57,40,30,.14);
 
@@ -893,6 +1034,7 @@ body::before{
 }
 
 .story-photo{
+
     width:100%;
 
     aspect-ratio:4/5;
@@ -901,12 +1043,13 @@ body::before{
 
     overflow:hidden;
 
-    border-radius:7px;
+    border-radius:23px;
 
     background:#eee;
 }
 
 .story-photo img{
+
     width:100%;
     height:100%;
 
@@ -919,10 +1062,12 @@ body::before{
 }
 
 .story-photo:hover img{
+
     transform:scale(1.07);
 }
 
 .story-photo-area::before{
+
     content:"";
 
     position:absolute;
@@ -937,6 +1082,7 @@ body::before{
 }
 
 .story-photo-area::after{
+
     content:"01";
 
     position:absolute;
@@ -966,10 +1112,12 @@ body::before{
 }
 
 .story-content{
+
     position:relative;
 }
 
 .story-content h2{
+
     font-family:var(--serif);
 
     font-size:
@@ -983,6 +1131,7 @@ body::before{
 }
 
 .story-content p{
+
     max-width:420px;
 
     color:var(--brown-light);
@@ -993,6 +1142,7 @@ body::before{
 }
 
 .story-line{
+
     width:65px;
     height:1px;
 
@@ -1007,11 +1157,13 @@ body::before{
 ========================================================= */
 
 .date{
+
     min-height:100vh;
 
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     text-align:center;
@@ -1028,7 +1180,7 @@ body::before{
             rgba(42,31,26,.91)
         ),
 
-        url("./images/couple2.jpeg");
+        url("./images/couple3.jpeg");
 
     background-size:cover;
 
@@ -1038,6 +1190,7 @@ body::before{
 }
 
 .date::before{
+
     content:"";
 
     position:absolute;
@@ -1046,10 +1199,11 @@ body::before{
 
     border:1px solid rgba(218,193,150,.38);
 
-    border-radius:25px;
+    border-radius:28px;
 }
 
 .date::after{
+
     content:"";
 
     position:absolute;
@@ -1058,15 +1212,18 @@ body::before{
 
     border:1px solid rgba(218,193,150,.12);
 
-    border-radius:20px;
+    border-radius:23px;
 }
 
 .date-inner{
+
     position:relative;
+
     z-index:3;
 }
 
 .date-kicker{
+
     text-transform:uppercase;
 
     letter-spacing:8px;
@@ -1077,6 +1234,7 @@ body::before{
 }
 
 .date-number{
+
     font-family:var(--serif);
 
     font-size:
@@ -1092,6 +1250,7 @@ body::before{
 }
 
 .date-month{
+
     font-family:var(--serif);
 
     font-size:50px;
@@ -1100,6 +1259,7 @@ body::before{
 }
 
 .date-year{
+
     margin-top:12px;
 
     letter-spacing:8px;
@@ -1113,6 +1273,7 @@ body::before{
 ========================================================= */
 
 .countdown{
+
     display:flex;
 
     justify-content:center;
@@ -1123,6 +1284,7 @@ body::before{
 }
 
 .count-item{
+
     min-width:60px;
 
     display:flex;
@@ -1133,6 +1295,7 @@ body::before{
 }
 
 .count-item strong{
+
     font-family:var(--serif);
 
     font-size:43px;
@@ -1141,6 +1304,7 @@ body::before{
 }
 
 .count-item span{
+
     font-size:7px;
 
     letter-spacing:3px;
@@ -1158,6 +1322,7 @@ body::before{
 ========================================================= */
 
 .venue{
+
     padding:150px 0;
 
     background:
@@ -1171,6 +1336,7 @@ body::before{
 }
 
 .venue-inner{
+
     width:min(1080px,88%);
 
     margin:auto;
@@ -1185,6 +1351,7 @@ body::before{
 }
 
 .venue-content h2{
+
     font-family:var(--serif);
 
     font-size:
@@ -1198,6 +1365,7 @@ body::before{
 }
 
 .venue-name{
+
     font-family:var(--serif);
 
     font-size:34px;
@@ -1206,6 +1374,7 @@ body::before{
 }
 
 .venue-city{
+
     color:#8b756b;
 
     font-size:10px;
@@ -1216,6 +1385,7 @@ body::before{
 }
 
 .venue-description{
+
     max-width:390px;
 
     color:var(--brown-light);
@@ -1231,6 +1401,7 @@ body::before{
 ========================================================= */
 
 .map-frame{
+
     height:540px;
 
     padding:10px;
@@ -1239,7 +1410,7 @@ body::before{
 
     background:#fffaf4;
 
-    border-radius:24px;
+    border-radius:32px;
 
     box-shadow:var(--shadow);
 
@@ -1247,6 +1418,7 @@ body::before{
 }
 
 .map-frame::before{
+
     content:"";
 
     position:absolute;
@@ -1255,7 +1427,7 @@ body::before{
 
     border:1px solid rgba(185,152,97,.40);
 
-    border-radius:18px;
+    border-radius:25px;
 
     z-index:2;
 
@@ -1263,12 +1435,13 @@ body::before{
 }
 
 .map-frame iframe{
+
     width:100%;
     height:100%;
 
     border:0;
 
-    border-radius:16px;
+    border-radius:23px;
 
     filter:
         sepia(.06)
@@ -1276,9 +1449,11 @@ body::before{
 }
 
 .map-button{
+
     position:absolute;
 
     left:50%;
+
     bottom:22px;
 
     transform:translateX(-50%);
@@ -1305,6 +1480,7 @@ body::before{
 }
 
 .map-button:hover{
+
     background:var(--gold);
 
     transform:
@@ -1314,179 +1490,441 @@ body::before{
 
 
 /* =========================================================
-   RSVP
+   PRIVATE MESSAGE SECTION
 ========================================================= */
 
-.rsvp{
-    min-height:88vh;
+.private-messages{
+
+    position:relative;
+
+    padding:140px 20px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(198,155,148,.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(185,152,97,.13),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #faf6ef,
+            #eadbd0
+        );
+}
+
+.private-messages::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    left:-260px;
+    top:-180px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(185,152,97,.16);
+}
+
+.private-messages::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    right:-220px;
+    bottom:-180px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(198,155,148,.18);
+}
+
+.private-inner{
+
+    width:min(760px,94%);
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:3;
+}
+
+
+/* =========================================================
+   PRIVATE CARD
+========================================================= */
+
+.private-card{
+
+    position:relative;
+
+    padding:80px 55px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(248,239,229,.82)
+        );
+
+    border:1px solid rgba(185,152,97,.45);
+
+    border-radius:38px;
+
+    box-shadow:
+        0 35px 90px rgba(57,40,30,.13);
+
+    backdrop-filter:blur(15px);
+}
+
+.private-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:14px;
+
+    border:1px solid rgba(185,152,97,.22);
+
+    border-radius:29px;
+
+    pointer-events:none;
+}
+
+.private-card::after{
+
+    content:"✦";
+
+    position:absolute;
+
+    top:27px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:var(--gold);
+
+    font-size:14px;
+
+    background:#f8efe5;
+
+    padding:0 13px;
+}
+
+
+/* =========================================================
+   PRIVATE ICON
+========================================================= */
+
+.private-icon{
+
+    width:62px;
+    height:62px;
+
+    margin:0 auto 28px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(185,152,97,.48);
 
     display:flex;
 
     align-items:center;
     justify-content:center;
 
-    text-align:center;
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(185,152,97,.15),
-            transparent 42%
-        ),
-
-        linear-gradient(
-            135deg,
-            #eadbd0,
-            #faf4eb
-        );
-}
-
-.rsvp-card{
-    width:min(700px,88%);
-
-    padding:85px 35px;
-
-    background:
-        rgba(255,252,246,.72);
-
-    border:1px solid rgba(185,152,97,.42);
-
-    border-radius:28px;
-
-    box-shadow:var(--shadow);
-
-    backdrop-filter:blur(10px);
-
-    position:relative;
-}
-
-.rsvp-card::before{
-    content:"";
-
-    position:absolute;
-
-    inset:13px;
-
-    border:1px solid rgba(185,152,97,.27);
-
-    border-radius:21px;
-
-    pointer-events:none;
-}
-
-.rsvp-monogram{
-    font-family:var(--serif);
-
-    font-size:80px;
-
     color:var(--gold);
 
-    line-height:.7;
-
-    margin-bottom:32px;
-}
-
-.rsvp h2{
     font-family:var(--serif);
 
-    font-size:
-        clamp(58px,8vw,100px);
+    font-size:28px;
 
-    font-weight:400;
+    background:
+        rgba(255,255,255,.45);
 
-    line-height:.82;
-
-    margin-bottom:28px;
-}
-
-.rsvp p{
-    color:#7c6a61;
-
-    font-size:13px;
-
-    margin-bottom:40px;
+    box-shadow:
+        0 10px 30px rgba(57,40,30,.08);
 }
 
 
 /* =========================================================
-   RSVP BUTTON
+   PRIVATE TITLE
 ========================================================= */
 
-.rsvp-button{
-    display:inline-flex;
+.private-card h2{
 
-    align-items:center;
+    font-family:var(--serif);
 
-    gap:16px;
+    font-size:
+        clamp(50px,7vw,82px);
 
-    padding:17px 31px;
+    font-weight:400;
+
+    line-height:.85;
+
+    margin-bottom:24px;
+
+    color:var(--brown);
+}
+
+.private-description{
+
+    max-width:500px;
+
+    margin:0 auto 38px;
+
+    color:var(--brown-light);
+
+    font-size:13px;
+
+    line-height:2;
+}
+
+
+/* =========================================================
+   PRIVATE FORM
+========================================================= */
+
+.private-form{
+
+    max-width:500px;
+
+    margin:auto;
+
+    text-align:left;
+}
+
+.form-group{
+
+    margin-bottom:18px;
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    padding-left:5px;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#927c70;
+}
+
+.form-group input,
+.form-group textarea{
+
+    width:100%;
+
+    border:1px solid rgba(185,152,97,.30);
+
+    border-radius:18px;
+
+    background:
+        rgba(255,255,255,.62);
+
+    color:var(--brown);
+
+    padding:16px 18px;
+
+    outline:none;
+
+    font-family:var(--sans);
+
+    font-size:13px;
+
+    transition:.35s;
+
+    resize:none;
+}
+
+.form-group textarea{
+
+    min-height:140px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+
+    color:#b2a39a;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+    border-color:var(--gold);
+
+    background:white;
+
+    box-shadow:
+        0 0 0 4px rgba(185,152,97,.08);
+}
+
+
+/* =========================================================
+   PRIVATE SUBMIT
+========================================================= */
+
+.private-submit{
+
+    width:100%;
+
+    margin-top:8px;
+
+    border:0;
+
+    padding:17px 25px;
+
+    border-radius:50px;
 
     background:var(--brown);
 
     color:white;
 
-    text-decoration:none;
-
-    border-radius:40px;
-
-    text-transform:uppercase;
-
-    letter-spacing:3px;
+    cursor:pointer;
 
     font-size:8px;
 
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
     transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
-.rsvp-button:hover{
+.private-submit::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
     background:var(--gold);
 
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 18px 40px rgba(60,40,30,.20);
-}
-
-.rsvp-button span{
-    font-size:17px;
+    transform:translateX(-100%);
 
     transition:.4s;
 }
 
-.rsvp-button:hover span{
-    transform:translateX(5px);
+.private-submit span{
+
+    position:relative;
+
+    z-index:2;
+}
+
+.private-submit:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(57,40,30,.18);
+}
+
+.private-submit:hover::before{
+
+    transform:translateX(0);
+}
+
+.private-submit:disabled{
+
+    opacity:.7;
+
+    cursor:wait;
 }
 
 
 /* =========================================================
-   RSVP FLOWERS
+   PRIVATE SUCCESS
 ========================================================= */
 
-.rsvp-flower{
-    position:absolute;
+.private-success{
 
-    width:380px;
-    height:380px;
+    display:none;
 
-    opacity:.32;
+    margin-top:20px;
 
-    pointer-events:none;
+    padding:15px 18px;
+
+    border-radius:15px;
+
+    background:rgba(122,128,104,.10);
+
+    border:1px solid rgba(122,128,104,.25);
+
+    color:#687054;
+
+    font-size:11px;
+
+    line-height:1.7;
 }
 
-.rsvp-flower.left{
-    left:-150px;
-    bottom:-130px;
+.private-success.show{
+
+    display:block;
+
+    animation:
+        successIn .6s ease;
 }
 
-.rsvp-flower.right{
-    right:-150px;
-    top:-130px;
+@keyframes successIn{
 
-    transform:rotate(180deg);
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+.private-note{
+
+    margin-top:25px;
+
+    color:#a29389;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
 }
 
 
@@ -1495,6 +1933,7 @@ body::before{
 ========================================================= */
 
 footer{
+
     padding:40px 20px;
 
     text-align:center;
@@ -1516,6 +1955,7 @@ footer{
 ========================================================= */
 
 .petal{
+
     position:fixed;
 
     top:-30px;
@@ -1543,7 +1983,9 @@ footer{
 }
 
 @keyframes fall{
+
     to{
+
         transform:
             translate3d(
                 var(--x),
@@ -1562,6 +2004,7 @@ footer{
 ========================================================= */
 
 .reveal{
+
     opacity:0;
 
     transform:
@@ -1576,6 +2019,7 @@ footer{
 }
 
 .reveal.show{
+
     opacity:1;
 
     transform:
@@ -1591,101 +2035,144 @@ footer{
 @media(max-width:850px){
 
     .invitation-card{
+
         min-height:590px;
-        border-radius:22px;
+
+        border-radius:28px;
     }
 
     .invitation-names{
+
         font-size:48px;
     }
 
     .monogram{
+
         font-size:82px;
     }
 
     .hero{
+
         padding-top:80px;
     }
 
     .hero-photo-wrap{
+
         width:72vw;
+
         height:500px;
     }
 
     .hero-names{
+
         font-size:65px;
     }
 
     .story{
+
         padding:120px 0;
     }
 
     .story-inner{
+
         grid-template-columns:1fr;
+
         gap:80px;
     }
 
     .story-photo-area{
+
         width:390px;
     }
 
     .story-content{
+
         text-align:center;
     }
 
     .story-content p{
+
         margin:auto;
     }
 
     .story-line{
+
         margin:30px auto;
     }
 
     .date{
+
         background-attachment:scroll;
     }
 
     .date::before{
+
         inset:20px;
-        border-radius:20px;
+
+        border-radius:23px;
     }
 
     .date::after{
+
         inset:32px;
-        border-radius:15px;
+
+        border-radius:18px;
     }
 
     .date-number{
+
         font-size:180px;
     }
 
     .countdown{
+
         gap:22px;
     }
 
     .count-item strong{
+
         font-size:35px;
     }
 
     .venue{
+
         padding:110px 0;
     }
 
     .venue-inner{
+
         grid-template-columns:1fr;
+
         gap:70px;
     }
 
     .venue-content{
+
         text-align:center;
     }
 
     .venue-description{
+
         margin:auto;
     }
 
     .map-frame{
+
         height:430px;
+
+        border-radius:28px;
+    }
+
+    .private-messages{
+
+        padding:110px 20px;
+    }
+
+    .private-card{
+
+        padding:75px 40px;
+
+        border-radius:32px;
     }
 }
 
@@ -1697,151 +2184,247 @@ footer{
 @media(max-width:500px){
 
     .opening{
+
         padding:15px;
     }
 
     .invitation-card{
+
         min-height:515px;
+
+        border-radius:25px;
     }
 
     .invitation-inner{
+
         padding:40px 20px;
     }
 
     .invitation-small{
+
         letter-spacing:3px;
+
         font-size:8px;
     }
 
     .monogram{
+
         font-size:70px;
     }
 
     .invitation-names{
+
         font-size:38px;
+
         margin-top:30px;
     }
 
     .invitation-date{
+
         letter-spacing:4px;
     }
 
     .open-btn{
+
         margin-top:43px;
+
         padding:15px 30px;
     }
 
     .hero{
+
         padding:72px 0 62px;
     }
 
     .hero-top{
+
         letter-spacing:4px;
+
         margin-bottom:28px;
     }
 
     .hero-photo-wrap{
+
         width:78vw;
+
         height:435px;
     }
 
     .hero-photo-wrap::before{
+
         inset:-13px;
     }
 
     .hero-photo-wrap::after{
+
         inset:-6px;
     }
 
     .hero-dot.one{
+
         left:-21px;
     }
 
     .hero-dot.two{
+
         right:-21px;
     }
 
     .hero-names{
+
         font-size:52px;
+
         margin-top:30px;
     }
 
     .hero-bottom{
+
         font-size:19px;
     }
 
     .intro-inner{
+
         padding:75px 20px;
     }
 
     .intro h2{
+
         font-size:55px;
     }
 
     .intro p{
+
         font-size:13px;
     }
 
     .story-photo-area{
+
         width:82vw;
+
         padding:9px;
+
+        border-radius:25px;
+    }
+
+    .story-photo{
+
+        border-radius:18px;
     }
 
     .story-photo-area::after{
+
         right:-17px;
 
         width:58px;
+
         height:58px;
 
         font-size:23px;
     }
 
     .story-photo-area::before{
+
         right:-25px;
+
         width:50px;
     }
 
     .story-content h2{
+
         font-size:59px;
     }
 
     .date-number{
+
         font-size:145px;
     }
 
     .date-month{
+
         font-size:34px;
+
         letter-spacing:6px;
     }
 
     .countdown{
+
         gap:10px;
     }
 
     .count-item{
+
         min-width:50px;
     }
 
     .count-item strong{
+
         font-size:27px;
     }
 
     .venue-content h2{
+
         font-size:70px;
     }
 
     .map-frame{
+
         height:380px;
-        border-radius:20px;
+
+        border-radius:22px;
     }
 
-    .rsvp-card{
+    .map-frame::before{
+
+        border-radius:17px;
+    }
+
+    .map-frame iframe{
+
+        border-radius:16px;
+    }
+
+    .private-messages{
+
+        padding:90px 15px;
+    }
+
+    .private-card{
+
         padding:70px 20px;
-        border-radius:24px;
+
+        border-radius:28px;
     }
 
-    .rsvp-monogram{
-        font-size:67px;
+    .private-card::before{
+
+        inset:10px;
+
+        border-radius:21px;
+    }
+
+    .private-card h2{
+
+        font-size:52px;
+    }
+
+    .private-description{
+
+        font-size:12px;
+
+        padding:0 10px;
+    }
+
+    .form-group input,
+    .form-group textarea{
+
+        border-radius:15px;
+    }
+
+    footer{
+
+        font-size:14px;
+
+        letter-spacing:2px;
     }
 }
 
@@ -1853,13 +2436,17 @@ footer{
 @media(prefers-reduced-motion:reduce){
 
     *{
+
         animation:none!important;
+
         transition:none!important;
+
         scroll-behavior:auto!important;
     }
 }
 
 </style>
+
 </head>
 
 
@@ -1871,7 +2458,9 @@ footer{
 ===================================================== -->
 
 <div class="progress">
+
     <span id="progress"></span>
+
 </div>
 
 
@@ -2013,7 +2602,6 @@ footer{
 
 <section class="hero">
 
-    <!-- FIXED IMAGE PATH -->
     <div class="hero-background"></div>
 
     <div class="hero-content">
@@ -2026,11 +2614,11 @@ footer{
         <div class="hero-photo-wrap">
 
             <div class="hero-dot one"></div>
+
             <div class="hero-dot two"></div>
 
             <div class="hero-photo">
 
-                <!-- couple1.jpeg -->
                 <img
                     src="./images/couple1.jpeg"
                     alt="Mostafa and Soaad"
@@ -2192,9 +2780,8 @@ footer{
 
             <div class="story-photo">
 
-                <!-- couple2.jpeg -->
                 <img
-                    src="./images/couple2.jpeg"
+                    src="./images/couple3.jpeg"
                     alt="Mostafa and Soaad"
                     loading="lazy"
                 >
@@ -2336,7 +2923,7 @@ footer{
             </h2>
 
             <div class="venue-name">
-                Grand Star
+                Grand Star 2
             </div>
 
             <div class="venue-city">
@@ -2357,7 +2944,7 @@ footer{
             <iframe
                 src="https://www.google.com/maps?q=27.1850131,31.0484496&z=17&output=embed"
                 loading="lazy"
-                title="Grand Star Assiut location">
+                title="Grand Star 2 Assiut location">
             </iframe>
 
             <a
@@ -2377,121 +2964,117 @@ footer{
 
 
 <!-- =====================================================
-     RSVP
+     PRIVATE MESSAGE
 ===================================================== -->
 
-<section class="rsvp">
+<section class="private-messages">
 
-    <div class="rsvp-flower left">
+    <div class="private-inner">
 
-        <svg viewBox="0 0 420 420">
+        <div class="private-card reveal">
 
-            <path
-                d="M20 400 C100 280 190 150 400 20"
-                fill="none"
-                stroke="#b99861"
-                stroke-width="1"
-            />
+            <div class="private-icon">
+                ♡
+            </div>
 
-            <ellipse
-                cx="130"
-                cy="315"
-                rx="20"
-                ry="58"
-                fill="#7b8068"
-                transform="rotate(-45 130 315)"
-            />
+            <div class="eyebrow">
+                A little note
+            </div>
 
-            <ellipse
-                cx="200"
-                cy="240"
-                rx="20"
-                ry="58"
-                fill="#c69b94"
-                transform="rotate(40 200 240)"
-            />
+            <h2>
+                Leave us<br>
+                a message.
+            </h2>
 
-            <ellipse
-                cx="275"
-                cy="165"
-                rx="19"
-                ry="55"
-                fill="#dbc49b"
-                transform="rotate(45 275 165)"
-            />
+            <p class="private-description">
 
-        </svg>
+                Want to leave a special wish,
+                a sweet message, or a few words
+                for the couple?
 
-    </div>
+                Write it here.
+                Your message will remain private
+                and will only be seen by the couple.
+
+            </p>
 
 
-    <div class="rsvp-flower right">
+            <form
+                class="private-form"
+                id="privateMessageForm"
+            >
 
-        <svg viewBox="0 0 420 420">
+                <div class="form-group">
 
-            <path
-                d="M20 400 C100 280 190 150 400 20"
-                fill="none"
-                stroke="#b99861"
-                stroke-width="1"
-            />
+                    <label for="guestName">
+                        Your Name
+                    </label>
 
-            <ellipse
-                cx="130"
-                cy="315"
-                rx="20"
-                ry="58"
-                fill="#7b8068"
-                transform="rotate(-45 130 315)"
-            />
+                    <input
+                        type="text"
+                        id="guestName"
+                        name="name"
+                        placeholder="Write your name"
+                        maxlength="60"
+                        autocomplete="name"
+                        required
+                    >
 
-            <ellipse
-                cx="200"
-                cy="240"
-                rx="20"
-                ry="58"
-                fill="#c69b94"
-                transform="rotate(40 200 240)"
-            />
-
-        </svg>
-
-    </div>
+                </div>
 
 
-    <div class="rsvp-card reveal">
+                <div class="form-group">
 
-        <div class="rsvp-monogram">
-            M&S
+                    <label for="guestMessage">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="guestMessage"
+                        name="message"
+                        placeholder="Write something beautiful for Mostafa & Soaad..."
+                        maxlength="500"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="private-submit"
+                    id="privateSubmit"
+                >
+
+                    <span>
+                        Send Private Message
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="private-success"
+                    id="privateSuccess"
+                >
+
+                    Thank you for your beautiful message ♡
+                    <br>
+
+                    It has been sent privately to the couple.
+
+                </div>
+
+            </form>
+
+
+            <div class="private-note">
+
+                🔒 Private · Only the couple can see your message
+
+            </div>
+
         </div>
-
-        <div class="eyebrow">
-            With love
-        </div>
-
-        <h2>
-            Will you<br>
-            celebrate with us?
-        </h2>
-
-        <p>
-            Your presence would make our day complete.
-        </p>
-
-        <a
-            href="https://wa.me/201022290052"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rsvp-button"
-            id="rsvpButton"
-        >
-            Confirm Attendance
-
-            <span>
-                →
-            </span>
-
-        </a>
 
     </div>
 
@@ -2503,11 +3086,73 @@ footer{
 ===================================================== -->
 
 <footer>
+
     Mostafa & Soaad · 25 · 09 · 2026
+
 </footer>
 
 
-<script>
+<!-- =====================================================
+     JAVASCRIPT + FIREBASE
+===================================================== -->
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    Timestamp
+}
+from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+
+/* =========================================================
+   FIREBASE CONFIG
+========================================================= */
+
+const firebaseConfig = {
+
+    apiKey:
+        "AIzaSyAxN4H6WI59MAxtLTq0LtjTXNLFKUbF8z4",
+
+    authDomain:
+        "wedding-41647.firebaseapp.com",
+
+    projectId:
+        "wedding-41647",
+
+    storageBucket:
+        "wedding-41647.firebasestorage.app",
+
+    messagingSenderId:
+        "616059991640",
+
+    appId:
+        "1:616059991640:web:e8f608aad09bab55763c2d",
+
+    measurementId:
+        "G-RBF0WWY3YT"
+};
+
+
+/* =========================================================
+   INITIALIZE FIREBASE
+========================================================= */
+
+const app =
+    initializeApp(firebaseConfig);
+
+const db =
+    getFirestore(app);
+
+console.log(
+    "Firebase connected successfully"
+);
+
 
 /* =========================================================
    OPEN INVITATION
@@ -2519,43 +3164,52 @@ const opening =
 const openBtn =
     document.getElementById("openBtn");
 
-document.body.style.overflow = "hidden";
+document.body.style.overflow =
+    "hidden";
 
-openBtn.addEventListener("click", () => {
 
-    opening.classList.add("hide");
+openBtn.addEventListener(
+    "click",
+    () => {
 
-    document.body.style.overflow = "auto";
+        opening.classList.add("hide");
 
-    petals();
+        document.body.style.overflow =
+            "auto";
 
-});
+        petals();
+
+    }
+);
 
 
 /* =========================================================
    SCROLL PROGRESS
 ========================================================= */
 
-window.addEventListener("scroll", () => {
+window.addEventListener(
+    "scroll",
+    () => {
 
-    const scroll =
-        window.scrollY;
+        const scroll =
+            window.scrollY;
 
-    const total =
-        document.documentElement.scrollHeight -
-        window.innerHeight;
+        const total =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
 
-    const percent =
-        total > 0
-            ? (scroll / total) * 100
-            : 0;
+        const percent =
+            total > 0
+                ? (scroll / total) * 100
+                : 0;
 
-    document
-        .getElementById("progress")
-        .style.width =
-        percent + "%";
+        document
+            .getElementById("progress")
+            .style.width =
+            percent + "%";
 
-});
+    }
+);
 
 
 /* =========================================================
@@ -2564,31 +3218,45 @@ window.addEventListener("scroll", () => {
 
 const observer =
     new IntersectionObserver(
+
         entries => {
 
-            entries.forEach(entry => {
+            entries.forEach(
+                entry => {
 
-                if(entry.isIntersecting){
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-                    entry.target.classList.add("show");
+                        entry.target
+                            .classList
+                            .add("show");
+
+                    }
 
                 }
-
-            });
+            );
 
         },
+
         {
             threshold:.12
         }
+
     );
+
 
 document
     .querySelectorAll(".reveal")
-    .forEach(element => {
+    .forEach(
+        element => {
 
-        observer.observe(element);
+            observer.observe(
+                element
+            );
 
-    });
+        }
+    );
 
 
 /* =========================================================
@@ -2610,7 +3278,9 @@ function countdown(){
         wedding - now;
 
 
-    if(distance <= 0){
+    if (
+        distance <= 0
+    ){
 
         [
             "days",
@@ -2618,15 +3288,19 @@ function countdown(){
             "minutes",
             "seconds"
 
-        ].forEach(id => {
+        ].forEach(
+            id => {
 
-            document
-                .getElementById(id)
-                .innerText = "00";
+                document
+                    .getElementById(id)
+                    .innerText =
+                    "00";
 
-        });
+            }
+        );
 
         return;
+
     }
 
 
@@ -2660,31 +3334,39 @@ function countdown(){
     document
         .getElementById("days")
         .innerText =
-        String(days).padStart(2,"0");
+        String(days)
+            .padStart(2,"0");
 
 
     document
         .getElementById("hours")
         .innerText =
-        String(hours).padStart(2,"0");
+        String(hours)
+            .padStart(2,"0");
 
 
     document
         .getElementById("minutes")
         .innerText =
-        String(minutes).padStart(2,"0");
+        String(minutes)
+            .padStart(2,"0");
 
 
     document
         .getElementById("seconds")
         .innerText =
-        String(seconds).padStart(2,"0");
+        String(seconds)
+            .padStart(2,"0");
 
 }
 
+
 countdown();
 
-setInterval(countdown,1000);
+setInterval(
+    countdown,
+    1000
+);
 
 
 /* =========================================================
@@ -2692,32 +3374,43 @@ setInterval(countdown,1000);
 ========================================================= */
 
 const heroPhoto =
-    document.querySelector(".hero-photo-wrap");
+    document.querySelector(
+        ".hero-photo-wrap"
+    );
 
-window.addEventListener("mousemove", event => {
 
-    if(window.innerWidth < 850)
-        return;
+window.addEventListener(
+    "mousemove",
+    event => {
 
-    const x =
-        event.clientX /
-        window.innerWidth -
-        .5;
-
-    const y =
-        event.clientY /
-        window.innerHeight -
-        .5;
-
-    heroPhoto.style.transform =
-        `
-        translate(
-            ${x * 7}px,
-            ${y * 7}px
+        if (
+            window.innerWidth < 850
         )
-        `;
+            return;
 
-});
+
+        const x =
+            event.clientX /
+            window.innerWidth -
+            .5;
+
+
+        const y =
+            event.clientY /
+            window.innerHeight -
+            .5;
+
+
+        heroPhoto.style.transform =
+            `
+            translate(
+                ${x * 7}px,
+                ${y * 7}px
+            )
+            `;
+
+    }
+);
 
 
 /* =========================================================
@@ -2726,93 +3419,67 @@ window.addEventListener("mousemove", event => {
 
 function petals(){
 
-    for(let i = 0; i < 30; i++){
+    for(
+        let i = 0;
+        i < 30;
+        i++
+    ){
 
-        setTimeout(() => {
+        setTimeout(
+            () => {
 
-            const petal =
-                document.createElement("div");
+                const petal =
+                    document.createElement(
+                        "div"
+                    );
 
-            petal.className =
-                "petal";
+                petal.className =
+                    "petal";
 
-            petal.style.left =
-                Math.random() * 100 +
-                "vw";
 
-            petal.style.setProperty(
-                "--x",
-                (Math.random() * 220 - 110) +
-                "px"
-            );
+                petal.style.left =
+                    Math.random() *
+                    100 +
+                    "vw";
 
-            petal.style.animationDuration =
-                5 +
-                Math.random() * 6 +
-                "s";
 
-            document.body.appendChild(petal);
+                petal.style.setProperty(
+                    "--x",
+                    (
+                        Math.random() *
+                        220 -
+                        110
+                    ) +
+                    "px"
+                );
 
-            setTimeout(() => {
 
-                petal.remove();
+                petal.style.animationDuration =
+                    5 +
+                    Math.random() *
+                    6 +
+                    "s";
 
-            },12000);
 
-        },i * 150);
+                document.body.appendChild(
+                    petal
+                );
+
+
+                setTimeout(
+                    () => {
+
+                        petal.remove();
+
+                    },
+                    12000
+                );
+
+            },
+            i * 150
+        );
 
     }
-
-}
-
-
-/* =========================================================
-   RSVP MAGNETIC
-========================================================= */
-
-const rsvp =
-    document.getElementById("rsvpButton");
-
-if(window.innerWidth > 850){
-
-    rsvp.addEventListener(
-        "mousemove",
-        event => {
-
-            const rect =
-                rsvp.getBoundingClientRect();
-
-            const x =
-                event.clientX -
-                rect.left -
-                rect.width / 2;
-
-            const y =
-                event.clientY -
-                rect.top -
-                rect.height / 2;
-
-            rsvp.style.transform =
-                `
-                translate(
-                    ${x * .10}px,
-                    ${y * .10}px
-                )
-                `;
-
-        }
-    );
-
-
-    rsvp.addEventListener(
-        "mouseleave",
-        () => {
-
-            rsvp.style.transform =
-                "translate(0,0)";
-
-        }
-    );
 
 }
 
@@ -2821,40 +3488,56 @@ if(window.innerWidth > 850){
    FINAL CELEBRATION
 ========================================================= */
 
-let celebrated = false;
+let celebrated =
+    false;
+
 
 const finalObserver =
     new IntersectionObserver(
+
         entries => {
 
-            if(
+            if (
                 entries[0].isIntersecting &&
                 !celebrated
             ){
 
-                celebrated = true;
+                celebrated =
+                    true;
 
                 celebration();
 
             }
 
         },
+
         {
             threshold:.5
         }
+
     );
 
+
 finalObserver.observe(
-    document.querySelector(".rsvp")
+    document.querySelector(
+        ".private-messages"
+    )
 );
 
 
 function celebration(){
 
-    for(let i = 0; i < 50; i++){
+    for(
+        let i = 0;
+        i < 50;
+        i++
+    ){
 
         const piece =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
+
 
         piece.style.position =
             "fixed";
@@ -2886,23 +3569,29 @@ function celebration(){
             "#dbc49b"
 
         ][
+
             Math.floor(
                 Math.random() * 4
             )
+
         ];
 
 
-        document.body.appendChild(piece);
+        document.body.appendChild(
+            piece
+        );
 
 
         const angle =
             Math.random() *
-            Math.PI * 2;
+            Math.PI *
+            2;
 
 
         const distance =
             180 +
-            Math.random() * 320;
+            Math.random() *
+            320;
 
 
         const x =
@@ -2920,12 +3609,16 @@ function celebration(){
             [
 
                 {
+
                     transform:
                         "translate(-50%,-50%) rotate(0)",
+
                     opacity:1
+
                 },
 
                 {
+
                     transform:
                         `
                         translate(
@@ -2934,7 +3627,9 @@ function celebration(){
                         )
                         rotate(720deg)
                         `,
+
                     opacity:0
+
                 }
 
             ],
@@ -2943,24 +3638,277 @@ function celebration(){
 
                 duration:
                     1400 +
-                    Math.random() * 1000,
+                    Math.random() *
+                    1000,
 
                 easing:
                     "cubic-bezier(.2,.7,.2,1)"
 
             }
 
-        ).onfinish = () => {
+        ).onfinish =
+            () => {
 
-            piece.remove();
+                piece.remove();
 
-        };
+            };
 
     }
 
 }
 
+
+/* =========================================================
+   PRIVATE MESSAGE FORM + FIREBASE
+========================================================= */
+
+const privateForm =
+    document.getElementById(
+        "privateMessageForm"
+    );
+
+const privateSubmit =
+    document.getElementById(
+        "privateSubmit"
+    );
+
+const privateSuccess =
+    document.getElementById(
+        "privateSuccess"
+    );
+
+
+if (!privateForm) {
+
+    console.error(
+        "privateMessageForm was not found."
+    );
+
+} else {
+
+
+    privateForm.addEventListener(
+        "submit",
+        async event => {
+
+            event.preventDefault();
+
+
+            const nameInput =
+                document.getElementById(
+                    "guestName"
+                );
+
+
+            const messageInput =
+                document.getElementById(
+                    "guestMessage"
+                );
+
+
+            const name =
+                nameInput.value.trim();
+
+
+            const message =
+                messageInput.value.trim();
+
+
+            if (
+                !name ||
+                !message
+            ){
+
+                alert(
+                    "Please enter your name and message."
+                );
+
+                return;
+
+            }
+
+
+            privateSubmit.disabled =
+                true;
+
+
+            const buttonText =
+                privateSubmit.querySelector(
+                    "span"
+                );
+
+
+            if (buttonText){
+
+                buttonText.innerText =
+                    "Sending...";
+
+            }
+
+
+            console.log(
+                "Sending message to Firebase..."
+            );
+
+
+            try {
+
+                const docRef =
+                    await addDoc(
+
+                        collection(
+                            db,
+                            "privateMessages"
+                        ),
+
+                        {
+
+                            name:
+                                name,
+
+                            message:
+                                message,
+
+                            createdAt:
+                                Timestamp.now()
+
+                        }
+
+                    );
+
+
+                console.log(
+                    "Message saved successfully."
+                );
+
+
+                console.log(
+                    "Document ID:",
+                    docRef.id
+                );
+
+
+                privateForm.reset();
+
+
+                if (privateSuccess){
+
+                    privateSuccess
+                        .classList
+                        .add("show");
+
+                }
+
+
+                if (buttonText){
+
+                    buttonText.innerText =
+                        "Message Sent ♡";
+
+                }
+
+
+                setTimeout(
+                    () => {
+
+                        if (privateSuccess){
+
+                            privateSuccess
+                                .classList
+                                .remove("show");
+
+                        }
+
+
+                        if (buttonText){
+
+                            buttonText.innerText =
+                                "Send Private Message";
+
+                        }
+
+
+                        privateSubmit.disabled =
+                            false;
+
+                    },
+                    4000
+                );
+
+
+            }
+
+            catch(error){
+
+                console.error(
+                    "FIREBASE ERROR:"
+                );
+
+                console.error(
+                    "Code:",
+                    error.code
+                );
+
+                console.error(
+                    "Message:",
+                    error.message
+                );
+
+                console.error(
+                    error
+                );
+
+
+                alert(
+
+                    "Message could not be sent.\n\n" +
+
+                    "Error: " +
+                    error.code +
+
+                    "\n\n" +
+
+                    error.message
+
+                );
+
+
+                if (buttonText){
+
+                    buttonText.innerText =
+                        "Try Again";
+
+                }
+
+
+                privateSubmit.disabled =
+                    false;
+
+
+                setTimeout(
+                    () => {
+
+                        if (buttonText){
+
+                            buttonText.innerText =
+                                "Send Private Message";
+
+                        }
+
+                    },
+                    2500
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
 </script>
 
 </body>
+
 </html>
